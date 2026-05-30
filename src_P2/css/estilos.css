@@ -382,6 +382,17 @@ p {
   -webkit-clip-path: url("#clip-gastronomia");
 }
 
+/* tamaño intermedio para la imagen */
+@media (min-width: 768px) {
+  .hero-index {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/valentin-7uGtxeLLa0g-unsplash.jpg?as=webp&width=1000");
+    background-size: cover;
+    background-position: bottom;
+  }
+}
+
 /* 2 columnas */
 @media (min-width: 1024px) {
   .hero-index {
