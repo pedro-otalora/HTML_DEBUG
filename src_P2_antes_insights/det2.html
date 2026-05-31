@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="María Gómez - Gastronomía en femenino" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>María Gómez - {{ titulo_web }}</title>
+
+    <!-- icono de página -->
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
+    <!-- sharp parece no funcionar con la etiqueta link, así que se hace una versión png -->
+    <link rel="icon" href="./img/favicon.png" type="image/png" />
+
+    <!-- hoja de estilos -->
+    <link rel="stylesheet" href="./css/estilos.css" />
+
+    <!-- tipografía -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <script src="./js/script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- cabecera de página -->
+    <include src="./src_P2/includes/header.html"></include>
+
+    <main>
+      <!-- miga de pan -->
+      <nav class="breadcrumb-nav" aria-label="Miga de pan">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="categoria.html">Mujeres destacadas</a></li>
+          <li aria-current="page">María Gómez</li>
+        </ol>
+      </nav>
+
+      <article class="detalle">
+        <div class="container">
+          <!-- título y subtítulo -->
+          <header class="header-interno">
+            <h1>María Gómez</h1>
+            <p class="header-interno-subtitulo">
+              Magoga Cartagena (<time datetime="2014">2014</time>)<br />*
+              Estrella <span lang="fr"><i>Michelin</i></span> (<time
+                datetime="2020"
+                >2020</time
+              >)
+            </p>
+          </header>
+
+          <!-- imagen portada -->
+          <figure class="header-interno-figure">
+            <include
+              src="./src_P2/includes/picture-art.html"
+              locals='{
+                        "srcDesktop": "maria_gomez_magoga_panoramica.jpg",
+                        "srcMobile": "maria_gomez_magoga_cuadrada.jpg",
+                        "alt": "María Gómez con el uniforme de trabajo",
+                        "lang": "",
+                        "class": "header-interno-image"
+                      }'
+            >
+            </include>
+
+            <figcaption class="img-caption">
+              María Gómez, chef de Magoga. | Fuente:
+              <a
+                href="https://restaurantemagoga.com/maria-gomez-el-alma-de-magoga/"
+                target="_blank"
+                rel="noopener"
+                >Restaurante Magoga</a
+              >
+            </figcaption>
+          </figure>
+
+          <!-- biografía -->
+          <section class="bio">
+            <h2 id="bio-title">Biografía y Trayectoria</h2>
+            <p>
+              <strong
+                >De la tradición familiar a la cima de la gastronomía.</strong
+              >
+              María Gómez (1987) creció en Fuente Álamo, rodeada de la riqueza
+              agrícola del Campo de Cartagena. Su formación en centros de
+              prestigio como
+              <abbr
+                title="Escuela de Hostelería y Restaurante de Karlos Arguiñano"
+                >AIALA</abbr
+              >
+              (la escuela de Karlos Arguiñano) y el
+              <span lang="en">Basque Culinary Center</span> forjó una técnica
+              impecable que hoy aplica a sus raíces. En 2014, junto a Adrián de
+              Marcos, convirtió una antigua casa de comidas en
+              <strong>Magoga</strong>, un proyecto que ha evolucionado hasta
+              alcanzar la prestigiosa
+              <strong
+                >Estrella <span lang="fr"><i>Michelin</i></span></strong
+              >
+              y dos Soles Repsol, transformando la ciudad de Cartagena en un
+              destino gastronómico de primer orden.
+            </p>
+
+            <p>
+              La cocina de María es un homenaje constante a su entorno
+              inmediato. Inspirada por las recetas de su abuela y el producto
+              local, su propuesta se basa en el equilibrio entre la huerta y el
+              mar. Es una firme defensora de tesoros regionales como el
+              <strong>arroz de Calasparra</strong>, la gamba roja de la costa
+              murciana y la <i>salmorreta</i>. Su capacidad para elevar
+              ingredientes humildes a la categoría de arte culinario la llevó a
+              ser finalista como Cocinero Revelación en Madrid Fusión 2019,
+              consolidándose como una de las voces más brillantes de su
+              generación.
+            </p>
+
+            <p>
+              Más allá de los fogones, María Gómez se ha convertido en un
+              referente de emprendimiento y liderazgo femenino. Reconocida como
+              <strong>Cartagenera del Año 2022</strong> y premiada por su
+              trayectoria empresarial, utiliza su plataforma para reivindicar la
+              conciliación en la hostelería y la visibilidad de las mujeres en
+              puestos de mando. Su legado en Magoga no es solo una experiencia
+              sensorial, sino un manifiesto de amor por el territorio murciano y
+              una proyección de su cultura hacia el escenario global.
+            </p>
+          </section>
+
+          <!-- receta -->
+          <section class="receta">
+            <header>
+              <h2>Quisquilla con salsa de pimiento amarillo</h2>
+            </header>
+
+            <!-- imagen receta -->
+            <figure class="receta-figure">
+              <include
+                src="./src_P2/includes/picture-std.html"
+                locals='{
+                          "src": "gambas_con_crema_pimiento_amarillo.jpg",
+                          "alt": "Quisquilla con salsa de pimiento amarillo",
+                          "lang": "",
+                          "sizes": "(max-width: 767px) 90vw, 800px",
+                          "class": "receta-imagen",
+                          "width": "800",
+                          "height": "400"
+                        }'
+              ></include>
+
+              <figcaption class="img-caption">
+                Quisquilla con salsa de pimiento amarillo | Fuente:
+                <a
+                  href="https://www.thermorecetas.com/gambas-con-crema-de-pimiento-amarillo/"
+                  target="_blank"
+                  rel="noopener"
+                  >Thermorecetas</a
+                >
+              </figcaption>
+            </figure>
+
+            <div class="receta-grid">
+              <section class="ingredientes">
+                <h3>Ingredientes (Territorio y Mar)</h3>
+                <ul>
+                  <li>
+                    <strong>Quisquillas frescas:</strong> 750 g de ejemplares de
+                    la costa de Cartagena.
+                  </li>
+                  <li>
+                    <strong>Base Vegetal:</strong> Pimiento verde
+                    <i lang="fr">brunoise</i>, cebolla morada y mini calabacín.
+                  </li>
+                  <li>
+                    <strong>Texturas:</strong> Láminas de mini mazorca y
+                    cilantro fresco.
+                  </li>
+                  <li>
+                    <strong>Sinfonía Amarilla:</strong> 900 g de pimientos
+                    amarillos, <i lang="en">sriracha</i>, cilantro y cebolleta.
+                  </li>
+                  <li>
+                    <strong>Toque lácteo:</strong> 500 g de leche de almendras
+                    (guiño a la tradición murciana).
+                  </li>
+                  <li>
+                    <strong>Cítricos:</strong> Zumo de limón y lima para la
+                    acidez necesaria.
+                  </li>
+                </ul>
+              </section>
+              <section class="preparacion">
+                <h3>Elaboración Paso a Paso</h3>
+                <ol>
+                  <li>
+                    Pelar los cuerpos de las quisquillas y reservar las cabezas
+                    más grandes para la fritura.
+                  </li>
+                  <li>
+                    Asar pimientos amarillos y cítricos; triturar con leche de
+                    almendras y <i lang="en">sriracha</i> hasta obtener una
+                    crema fina.
+                  </li>
+                  <li>
+                    Enharinar ligeramente las cabezas reservadas y freír en
+                    aceite muy caliente hasta que resulten crujientes.
+                  </li>
+                  <li>
+                    Disponer la salsa como base, colocar la cabeza frita en el
+                    centro y rodear con los cuerpos, las verduras y la lima.
+                  </li>
+                </ol>
+              </section>
+            </div>
+          </section>
+
+          <!-- galería de imágenes -->
+          <section class="galeria">
+            <h2>Galería</h2>
+            <ul class="galeria-grid">
+              <!-- imagen 1 -->
+              <li class="galeria-item">
+                <figure class="galeria-figure">
+                  <include
+                    src="./src_P2/includes/picture-std.html"
+                    locals='{
+                              "src": "maria_gomez_magoga_1.jpg", 
+                              "alt": "María con Adrián de Marcos", 
+                              "lang": "",
+                              "sizes": "(max-width: 767px) 45vw, 30vw",
+                              "class": "galeria-img",
+                              "loading": "lazy",
+                              "width": "400",
+                              "height": "300"
+                            }'
+                  >
+                  </include>
+                  <figcaption>
+                    María con Adrián de Marcos, su pareja profesional
+                  </figcaption>
+                </figure>
+              </li>
+              <!-- imagen 2 -->
+              <li class="galeria-item">
+                <figure class="galeria-figure">
+                  <include
+                    src="./src_P2/includes/picture-std.html"
+                    locals='{
+                              "src": "maria_gomez_magoga_2.jpg", 
+                              "alt": "María Gómez en cocina Magoga", 
+                              "lang": "",
+                              "sizes": "(max-width: 767px) 45vw, 30vw",
+                              "class": "galeria-img",
+                              "loading": "lazy",
+                              "width": "400",
+                              "height": "300"
+                            }'
+                  >
+                  </include>
+
+                  <figcaption>María en acción, Magoga Cartagena</figcaption>
+                </figure>
+              </li>
+
+              <!-- imagen 3 -->
+              <li class="galeria-item">
+                <figure class="galeria-figure">
+                  <include
+                    src="./src_P2/includes/picture-std.html"
+                    locals='{
+                              "src": "maria_gomez_magoga_3.jpg", 
+                              "alt": "María Gómez y Adrián de Marcos, Magoga", 
+                              "lang": "",
+                              "sizes": "(max-width: 767px) 45vw, 30vw",
+                              "class": "galeria-img",
+                              "loading": "lazy",
+                              "width": "400",
+                              "height": "300"
+                            }'
+                  >
+                  </include>
+
+                  <figcaption>
+                    María Gómez y Adrián de Marcos, Magoga
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+
+            <!-- modal imagen en grande -->
+            <div class="modal-galeria">
+              <span class="modal-cerrar">&times;</span>
+              <img
+                class="modal-img"
+                src="./img/placeholder.jpg"
+                alt="Imagen ampliada"
+              />
+            </div>
+          </section>
+
+          <!-- Vídeo -->
+          <div class="video">
+            <figure class="video-figure">
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/B0dpt86j3IE"
+                  title="Entrevista a María Gómez en La 7: Trayectoria y Estrella Michelin"
+                  loading="lazy"
+                  width="560"
+                  height="315"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                  "
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <figcaption>
+                Entrevista a María Gómez en La 7 | Fuente: YouTube
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- fuentes -->
+      <aside class="fuentes container">
+        <h2>Fuentes y créditos</h2>
+
+        <!-- enlaces páginas web -->
+        <h3>Texto y receta</h3>
+        <ul>
+          <!-- enlace web -->
+          <li>
+            <span class="fuentes-bold">Restaurante Magoga:</span>
+            <a
+              href="https://restaurantemagoga.com/maria-gomez-el-alma-de-magoga/"
+              target="_blank"
+              rel="noopener"
+              >María Gómez, el alma de Magoga</a
+            >
+          </li>
+          <!-- enlace web -->
+          <li>
+            <span class="fuentes-bold">La Nucía Gastronómica:</span>
+            <a
+              href="https://lanuciagastronomica.com/magoga/"
+              target="_blank"
+              rel="noopener"
+              >Magoga - Chef María Gómez</a
+            >
+          </li>
+          <!-- enlace web -->
+          <li>
+            <span class="fuentes-bold" lang="en">Facefoodmag:</span>
+            <a
+              href="https://facefoodmag.com/magazine/maria-gomez-equilibrio-campo-cartagena-mediterraneo"
+              target="_blank"
+              rel="noopener"
+              >María Gómez. El equilibrio entre el campo de Cartagena y el mar
+              Mediterráneo</a
+            >
+          </li>
+          <!-- enlace web -->
+          <li>
+            <span class="fuentes-bold">65YMAS.COM:</span>
+            <a
+              href="https://www.65ymas.com/sabores-mi-tierra/gastronomia-region-murcia/mujeres-ocupan-lugar-destacado-en-gastronomia-murciana_37597_102.html#:~:text=Mar%C3%ADa%20G%C3%B3mez%2C%20de%20Magoga%2C%20Cartagena"
+              target="_blank"
+              rel="noopener"
+              >María Gómez, de Magoga, Cartagena</a
+            >
+          </li>
+          <!-- enlace web -->
+          <li>
+            <span class="fuentes-bold">elPeriódico:</span>
+            <a
+              href="https://www.elperiodico.com/es/gastronomia/20231221/menu-ano-nuevo-recetas-pescado-originales-117863185"
+              target="_blank"
+              rel="noopener"
+              >Marinero y muy original: prepara un menú con estrella
+              <span lang="fr"><i>Michelin</i></span> para Año Nuevo</a
+            >
+            <span class="fuentes-fecha"
+              >(<time datetime="2023-12-21">21/12/2023</time>)</span
+            >
+          </li>
+          <!-- enlace video -->
+          <li>
+            <span class="fuentes-bold">La 7 (TV Autonómica de Murcia):</span>
+            <a
+              href="https://www.youtube.com/watch?v=B0dpt86j3IE"
+              target="_blank"
+              rel="noopener"
+              >Entrevista a María Gómez: El alma de Magoga y su reconocimiento
+              <span lang="fr"><i>Michelin</i></span></a
+            >
+          </li>
+        </ul>
+
+        <!-- créditos imágenes-->
+        <h3>Imágenes</h3>
+        <ul>
+          <!-- créditos -->
+          <li>
+            <span class="fuentes-bold">Portada:</span> María Gómez | Magoga |
+            <a
+              href="https://restaurantemagoga.com/wp-content/uploads/2025/08/Maria-Gomez-Magoga.jpg"
+              target="_blank"
+              rel="noopener"
+              >Restaurante Magoga</a
+            >
+          </li>
+          <!-- créditos -->
+          <li>
+            <span class="fuentes-bold">Receta: </span>Gambas con crema de
+            pimientos amarillos | Mayra Fernández Joglar |
+            <a
+              href="https://www.thermorecetas.com/wp-content/uploads/2015/07/gambas-con-crema-de-pimiento-amarillo-thermorecetas.jpg.webp"
+              target="_blank"
+              rel="noopener"
+              >Thermorecetas</a
+            >
+          </li>
+          <!-- créditos -->
+          <li>
+            <span class="fuentes-bold">Galería 1: </span>María Gómez, de Magoga,
+            Cartagena |
+            <a
+              href="https://www.65ymas.com/uploads/s1/97/62/07/mari-a-go-mez-de-magoga-cartagena_1_621x621.jpeg"
+              target="_blank"
+              rel="noopener"
+              >65YMAS.com</a
+            >
+          </li>
+          <!-- créditos -->
+          <li>
+            <span class="fuentes-bold">Galería 2: </span>Chef María Gómez |
+            Magoga |
+            <a
+              href="https://facefoodmag.com/fotos/blog/chef-maria-gomez-arrozal-calasparra.jpg"
+              target="_blank"
+              rel="noopener"
+              lang="en"
+              >Facefoodmag</a
+            >
+          </li>
+          <!-- créditos -->
+          <li>
+            <span class="fuentes-bold">Galería 3: </span>María Gómez y Adrián de
+            Marcos | Magoga |
+            <a
+              href="https://facefoodmag.com/fotos/files/maria-gomez-adrian-de-marcos.jpg"
+              target="_blank"
+              rel="noopener"
+              >Restaurante Magoga</a
+            >
+          </li>
+        </ul>
+      </aside>
+    </main>
+
+    <!-- <footer> --->
+    <include src="./src_P2/includes/footer.html"></include>
+  </body>
+</html>

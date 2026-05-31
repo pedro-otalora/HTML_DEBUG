@@ -31,38 +31,30 @@ document.querySelectorAll(".menu-links a").forEach((link) => {
 
 // MODAL GALERÍA
 document.addEventListener("click", (e) => {
-  // detecta si el click es en una figura de la galería
   const figure = e.target.closest(".galeria-figure");
 
   if (figure) {
     const imgMiniatura = figure.querySelector(".galeria-img");
     const sourceWebP = figure.querySelector("source");
-
     const modal = document.querySelector(".modal-galeria");
     const modalImg = modal.querySelector(".modal-img");
 
-    // copia el ALT para mantener la accesibilidad
-    modalImg.alt = imgMiniatura.alt;
+    // Agrupamos los cambios asíncronamente en el próximo frame de animación
+    requestAnimationFrame(() => {
+      modalImg.alt = imgMiniatura.alt;
+      modalImg.sizes = "90vw";
 
-    // actualiza 'sizes' a un valor grande (90vw) de asignar el srcset
-    // para que el navegador elija la imagen de alta resolución inmediatamente
+      if (sourceWebP && sourceWebP.srcset) {
+        modalImg.srcset = sourceWebP.srcset;
+      }
 
-    modalImg.sizes = "90vw";
-
-    // copia el srcset del source que contiene las rutas procesadas por Sharp
-    if (sourceWebP && sourceWebP.srcset) {
-      modalImg.srcset = sourceWebP.srcset;
-    }
-
-    // actualiza el SRC
-    modalImg.src = imgMiniatura.src;
-
-    // muestra el modal y bloquea el scroll del fondo
-    modal.classList.add("mostrar");
-    document.body.style.overflow = "hidden";
+      modalImg.src = imgMiniatura.src;
+      modal.classList.add("mostrar");
+      document.body.style.overflow = "hidden"; // El cambio de scroll entra limpio
+    });
   }
 
-  // cierra el modal al hacer click en la X o fuera de la imagen
+  // Cierra el modal al hacer click en la X o fuera de la imagen
   if (
     e.target.classList.contains("modal-cerrar") ||
     e.target.classList.contains("modal-galeria")
@@ -70,11 +62,11 @@ document.addEventListener("click", (e) => {
     const modal = document.querySelector(".modal-galeria");
     const modalImg = modal.querySelector(".modal-img");
 
-    modal.classList.remove("mostrar");
-    document.body.style.overflow = "";
-
-    // limpia los atributos al cerrar
-    modalImg.srcset = "";
-    modalImg.sizes = "";
+    requestAnimationFrame(() => {
+      modal.classList.remove("mostrar");
+      document.body.style.overflow = ""; // Restaura la barra de scroll de forma segura
+      modalImg.srcset = "";
+      modalImg.sizes = "";
+    });
   }
 });

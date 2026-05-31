@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ titulo_web }}</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <!-- icono de página -->
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
     <!-- sharp parece no funcionar con la etiqueta link, así que se hace una versión png -->
@@ -43,24 +46,27 @@
                 type="image/webp"
                 srcset="
                   ./img/howtogym-S9NchuPb79I-unsplash.jpg?as=webp&width=400   400w,
+                  ./img/howtogym-S9NchuPb79I-unsplash.jpg?as=webp&width=600   600w,
                   ./img/howtogym-S9NchuPb79I-unsplash.jpg?as=webp&width=800   800w,
                   ./img/howtogym-S9NchuPb79I-unsplash.jpg?as=webp&width=1200 1200w,
                   ./img/howtogym-S9NchuPb79I-unsplash.jpg?as=webp&width=1600 1600w,
                   ./img/howtogym-S9NchuPb79I-unsplash.jpg?as=webp&width=2400 2400w
                 "
-                sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 800px"
+                sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 600px"
               />
               <img
                 src="./img/howtogym-S9NchuPb79I-unsplash.jpg?width=800"
                 srcset="
                   ./img/howtogym-S9NchuPb79I-unsplash.jpg?width=400   400w,
+                  ./img/howtogym-S9NchuPb79I-unsplash.jpg?width=600   600w,
                   ./img/howtogym-S9NchuPb79I-unsplash.jpg?width=800   800w,
                   ./img/howtogym-S9NchuPb79I-unsplash.jpg?width=1200 1200w
                 "
-                sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 800px"
+                sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 600px"
                 alt="Lupa negra sobre mesa de mármol blanco. HowToGym - Unspash"
                 class="hero-index-image-clip"
                 loading="eager"
+                fetchpriority="high"
                 width="800"
                 height="450"
               />

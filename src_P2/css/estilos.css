@@ -288,7 +288,7 @@ p {
   transform-origin: center center;
   animation:
     popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both,
-    latido 3s ease-in-out 2.5s infinite;
+    /* latido 3s ease-in-out 2.5s infinite; */
 }
 
 .anim-simbolo {
@@ -342,7 +342,7 @@ p {
 ======================================= */
 .hero-index {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(202, 202, 202, 0.5)),
     url("../img/valentin-7uGtxeLLa0g-unsplash.jpg?as=webp&width=600");
   background-size: cover;
   background-position: bottom;
@@ -381,6 +381,9 @@ p {
 
   clip-path: url("#clip-gastronomia");
   -webkit-clip-path: url("#clip-gastronomia");
+
+  transform: translateZ(0);
+  will-change: clip-path;
 }
 
 .hero-index-image-clip {
