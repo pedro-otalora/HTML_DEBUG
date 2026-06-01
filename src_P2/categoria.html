@@ -9,8 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mujeres destacadas - {{ titulo_web }}</title>
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <!-- precarga de las fuentes del viewport inicial -->
+    <link
+      rel="preload"
+      href="./fonts/playfair-display-v40-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href=".//fonts/inter-v20-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
     <!-- icono de página -->
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
@@ -20,11 +33,7 @@
     <!-- hoja de estilos -->
     <link rel="stylesheet" href="./css/estilos.css" />
 
-    <!-- tipografía -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
-    /> -->
+    <!-- carga el javascript en diferido -->
     <script src="./js/script.js" defer></script>
   </head>
   <body>
@@ -101,11 +110,11 @@
                               "src": "maria_gomez_magoga.jpg",
                               "alt": "María Gómez en los fogones de Magoga",
                               "lang": "",
-                              "sizes": "(max-width: 767px) 90vw, (max-width: 1200px) 45vw, 540px",
+                              "sizes": "(max-width: 767px) 100vw, (max-width: 1200px) 45vw, 540px",
                               "class": "",
                               "loading": "eager",
-                              "width": "600",
-                              "height": "338"
+                              "width": "540",
+                              "height": "304"
                             }'
                   >
                   </include>
@@ -135,11 +144,11 @@
                               "src": "elena_arzak.jpg",
                               "alt": "Elena Arzak en la cocina",
                               "lang": "",
-                              "sizes": "(max-width: 767px) 90vw, (max-width: 1200px) 45vw, 540px",
+                              "sizes": "(max-width: 767px) 100vw, (max-width: 1200px) 45vw, 540px",
                               "class": "",
                               "loading": "lazy",
-                              "width": "600",
-                              "height": "338"
+                              "width": "540",
+                              "height": "304"
                             }'
                   >
                   </include>
@@ -170,11 +179,11 @@
                               "src": "susi-sanchez-la-finca.jpg",
                               "alt": "Susi Díaz en La Finca, Elche",
                               "lang": "",
-                              "sizes": "(max-width: 767px) 90vw, (max-width: 1200px) 45vw, 540px",
+                              "sizes": "(max-width: 767px) 100vw, (max-width: 1200px) 45vw, 540px",
                               "class": "",
                               "loading": "lazy",
-                              "width": "600",
-                              "height": "338"
+                              "width": "540",
+                              "height": "304"
                             }'
                   >
                   </include>
@@ -204,11 +213,11 @@
                               "src": "carme-ruscalleda.jpg",
                               "alt": "Carme Ruscalleda en Sant Pau o Moments",
                               "lang": "",
-                              "sizes": "(max-width: 767px) 90vw, (max-width: 1200px) 45vw, 540px",
+                              "sizes": "(max-width: 767px) 100vw, (max-width: 1200px) 45vw, 540px",
                               "class": "",
                               "loading": "lazy",
-                              "width": "600",
-                              "height": "338"
+                              "width": "540",
+                              "height": "304"
                             }'
                   >
                   </include>
@@ -238,11 +247,11 @@
                               "src": "vicky-arrels-restaurant-sagunto.jpg",
                               "alt": "Vicky Sevilla en el restaurante Arrels de Sagunto",
                               "lang": "",
-                              "sizes": "(max-width: 767px) 90vw, (max-width: 1200px) 45vw, 540px",
+                              "sizes": "(max-width: 767px) 100vw, (max-width: 1200px) 45vw, 540px",
                               "class": "",
                               "loading": "lazy",
-                              "width": "600",
-                              "height": "338"
+                              "width": "540",
+                              "height": "304"
                             }'
                   >
                   </include>

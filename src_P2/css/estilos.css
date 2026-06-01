@@ -422,15 +422,12 @@ p {
   }
 }
 
-/* ========================================
+/* =======================================
    HERO INDEX
 ======================================= */
 .hero-index {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(202, 202, 202, 0.5)),
-    url("../img/valentin-7uGtxeLLa0g-unsplash.jpg?as=webp&width=600");
-  background-size: cover;
-  background-position: bottom;
+  position: relative;
+  overflow: hidden;
   color: var(--color-texto-inverso);
   display: flex;
   flex-direction: column;
@@ -442,6 +439,40 @@ p {
   min-height: 60vh;
 }
 
+.hero-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  z-index: 2;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  display: block;
+}
+
+.hero-index-text,
+.hero-index-image {
+  position: relative;
+  z-index: 3;
+}
+
 .hero-index h1 {
   color: var(--color-texto-inverso);
   margin-bottom: 1.5rem;
@@ -449,7 +480,7 @@ p {
 }
 
 .hero-index-text {
-  width: 100%; /* En móvil ocupa todo */
+  width: 100%;
   max-width: 800px;
 }
 
@@ -463,10 +494,8 @@ p {
   width: 100%;
   max-width: 350px;
   aspect-ratio: 2 / 1;
-
   clip-path: url("#clip-gastronomia");
   -webkit-clip-path: url("#clip-gastronomia");
-
   transform: translateZ(0);
   will-change: clip-path;
 }
@@ -478,25 +507,9 @@ p {
   display: block;
 }
 
-/* tamaño intermedio para la imagen */
-@media (min-width: 768px) {
-  .hero-index {
-    background:
-      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../img/valentin-7uGtxeLLa0g-unsplash.jpg?as=webp&width=1000");
-    background-size: cover;
-    background-position: bottom;
-  }
-}
-
-/* 2 columnas */
+/* 2 columnas para pantallas grandes */
 @media (min-width: 1024px) {
   .hero-index {
-    background:
-      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../img/valentin-7uGtxeLLa0g-unsplash.jpg?as=webp&width=1600");
-    background-size: cover;
-    background-position: bottom;
     flex-direction: row;
     text-align: left;
     justify-content: space-between;
