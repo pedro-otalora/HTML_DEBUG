@@ -1,11 +1,10 @@
-
-
-
-
 /* ========================================
    DEPENDENCIA HOVER
 ======================================= */
-@import "npm:hover.css";
+
+/* @import "npm:hover.css"; */
+/* carga solo el efecto que se usa en vez de toda la librería */
+@import "npm:hover.css/scss/effects/2d-transitions/_grow.scss";
 
 
 /* ========================================
