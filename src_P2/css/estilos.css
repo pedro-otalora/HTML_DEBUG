@@ -1,41 +1,36 @@
 /* ========================================
    DEPENDENCIA HOVER
 ======================================= */
-
+/* se elimina su carga y se añaden los estilos necesarios al final del css */
 /* @import "npm:hover.css"; */
-/* carga solo el efecto que se usa en vez de toda la librería */
-@import "npm:hover.css/scss/effects/2d-transitions/_grow.scss";
-
 
 /* ========================================
-   CARGA DE FUENTES EN EL SERVIDOR
+   CARGA DE FUENTES DEL SERVIDOR
 ======================================= */
-
 /* playfair-display-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Playfair Display';
+  font-display: swap;
+  font-family: "Playfair Display";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/playfair-display-v40-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/playfair-display-v40-latin-regular.woff2") format("woff2");
 }
 /* playfair-display-italic - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Playfair Display';
+  font-display: swap;
+  font-family: "Playfair Display";
   font-style: italic;
   font-weight: 400;
-  src: url('../fonts/playfair-display-v40-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/playfair-display-v40-latin-italic.woff2") format("woff2");
 }
 /* playfair-display-700 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Playfair Display';
+  font-display: swap;
+  font-family: "Playfair Display";
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/playfair-display-v40-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/playfair-display-v40-latin-700.woff2") format("woff2");
 }
-
 
 /* ========================================
    VARIABLES CSS
@@ -43,10 +38,12 @@
 :root {
   /* FUENTES */
   --fuente-titulo: "Playfair Display", Georgia, serif;
-  
+
   /* --fuente-cuerpo: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; */
   /* se sustituye la fuente Inter por su similitud con las fuentes del sistema */
-  --fuente-cuerpo: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --fuente-cuerpo:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
   --fuente-regular: 400;
   --fuente-medium: 500;
   --fuente-bold: 700;
@@ -323,9 +320,8 @@ p {
 ======================================= */
 .anim-gorro {
   transform-origin: center center;
-  animation:
-    popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both,
-    /* latido 3s ease-in-out 2.5s infinite; */
+  animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  /* latido 3s ease-in-out 2.5s infinite; */
 }
 
 .anim-simbolo {
@@ -401,7 +397,7 @@ p {
 }
 
 .hero-bg-container::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -457,6 +453,7 @@ p {
   height: 100%;
   object-fit: cover;
   display: block;
+  will-change: transform, clip-path;
 }
 
 /* 2 columnas para pantallas grandes */
@@ -1081,4 +1078,164 @@ abbr[title] {
 :focus-visible {
   outline: 3px solid var(--color-primario);
   outline-offset: 2px;
+}
+
+/* ==========================================================================
+   EXTRACCIÓN DE HOVER.CSS PARA EVITAR LA DEPENDENCIA EXTERNA
+   ========================================================================== */
+
+/* estilos base */
+.hvr-curl-bottom-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+/* doblez de esquina */
+.hvr-curl-bottom-right::before {
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  bottom: 0;
+  right: 0;
+  background: white; /* Color del fondo del doblez */
+  background: linear-gradient(315deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
+  box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: width, height;
+  transition-property: width, height;
+}
+
+/* hover del doblez */
+.hvr-curl-bottom-right:hover::before,
+.hvr-curl-bottom-right:focus::before,
+.hvr-curl-bottom-right:active::before {
+  width: 25px;
+  height: 25px;
+}
+
+/* sombra flotante */
+.hvr-float-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.hvr-float-shadow::before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(
+    center,
+    示意 ellipse,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  /* transición para la aparición de la sombra */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+
+.hvr-float-shadow:hover,
+.hvr-float-shadow:focus,
+.hvr-float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.hvr-float-shadow:hover::before,
+.hvr-float-shadow:focus::before,
+.hvr-float-shadow:active::before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+}
+
+/* ==========================================================================
+   ESTILOS PARA LA FACHADA DE VÍDEO DE YOUTUBE
+   ========================================================================== */
+
+.youtube-fachada {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.youtube-fachada img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.youtube-fachada iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  background-color: #212121;
+  opacity: 0.9;
+  border-radius: 14px;
+  border: none;
+  z-index: 2;
+}
+
+.play-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.youtube-fachada:hover .play-button {
+  background-color: #f00;
 }

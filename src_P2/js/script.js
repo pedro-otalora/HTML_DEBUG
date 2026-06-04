@@ -39,7 +39,7 @@ document.addEventListener("click", (e) => {
     const modal = document.querySelector(".modal-galeria");
     const modalImg = modal.querySelector(".modal-img");
 
-    // Agrupamos los cambios asíncronamente en el próximo frame de animación
+    // se agrupan los cambios asíncronamente en el próximo frame de animación
     requestAnimationFrame(() => {
       modalImg.alt = imgMiniatura.alt;
       modalImg.sizes = "90vw";
@@ -54,7 +54,7 @@ document.addEventListener("click", (e) => {
     });
   }
 
-  // Cierra el modal al hacer click en la X o fuera de la imagen
+  // cierra el modal al hacer click en la X o fuera de la imagen
   if (
     e.target.classList.contains("modal-cerrar") ||
     e.target.classList.contains("modal-galeria")
@@ -67,6 +67,38 @@ document.addEventListener("click", (e) => {
       document.body.style.overflow = ""; // Restaura la barra de scroll de forma segura
       modalImg.srcset = "";
       modalImg.sizes = "";
+    });
+  }
+});
+
+
+// CARGA EL VIDEO DESDE LA FACHADA DE VÍDEO
+document.addEventListener('DOMContentLoaded', () => {
+  const videoFacade = document.getElementById('videoFacade');
+
+  if (videoFacade) {
+    videoFacade.addEventListener('click', function() {
+      // obtiene el ID limpio
+      const videoId = this.getAttribute('data-video-id');
+      
+      // crea el elemento iframe dinámicamente
+      const iframe = document.createElement('iframe');
+      
+      // construye la URL estándar de inserción de forma limpia
+      const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      
+      iframe.setAttribute('src', embedUrl);
+      iframe.setAttribute('title', 'Reproductor de vídeo de YouTube');
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.setAttribute('allowfullscreen', 'true');
+      
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      
+      // vacía el contenedor
+      this.innerHTML = '';
+      this.appendChild(iframe);
     });
   }
 });

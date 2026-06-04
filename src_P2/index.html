@@ -6,6 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ titulo_web }}</title>
 
+    <!-- preload de la imagen del clip-path -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      media="(min-width: 1024px)"
+      href="./img/valentin-7uGtxeLLa0g-unsplash.jpg?as=webp&width=1600"
+      fetchpriority="high"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      media="(min-width: 768px) and (max-width: 1023px)"
+      href="./img/valentin-7uGtxeLLa0g-unsplash.jpg?as=webp&width=1000"
+      fetchpriority="high"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      media="(max-width: 767px)"
+      href="./img/valentin-7uGtxeLLa0g-unsplash.jpg?as=webp&width=600"
+      fetchpriority="high"
+    />
+
     <!-- precarga de la fuente Playfair Display -->
     <link
       rel="preload"
@@ -102,23 +130,13 @@
                 sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 600px"
                 alt="Lupa negra sobre mesa de mármol blanco. HowToGym - Unspash"
                 class="hero-index-image-clip"
-                loading="eager"
-                fetchpriority="high"
+                loading="lazy"
+                fetchpriority="low"
                 width="800"
                 height="450"
               />
             </picture>
           </div>
-
-          <svg width="0" height="0">
-            <defs>
-              <clipPath id="clip-gastronomia" clipPathUnits="objectBoundingBox">
-                <path
-                  d="M0.556,0 C0.546,0,0.539,0.014,0.539,0.032 V0.333 C0.539,0.351,0.546,0.365,0.556,0.365 H0.557 V0.412 A0.155,0.294 0,0,0 0.416,0.705 A0.155,0.294 0,0,0 0.571,1 A0.155,0.294 0,0,0 0.726,0.705 A0.155,0.294 0,0,0 0.585,0.412 V0.365 H0.587 C0.596,0.365,0.603,0.351,0.603,0.333 V0.032 C0.603,0.014,0.596,0,0.587,0 Z M0.238,0 A0.109,0.208 0,0,0 0.136,0.137 A0.109,0.208 0,0,0 0.11,0.131 A0.109,0.208 0,0,0 0,0.339 A0.109,0.208 0,0,0 0.098,0.545 V1 H0.238 V1 H0.378 V0.545 A0.109,0.208 0,0,0 0.476,0.339 A0.109,0.208 0,0,0 0.366,0.131 A0.109,0.208 0,0,0 0.341,0.137 A0.109,0.208 0,0,0 0.238,0 Z M0.836,0 A0.164,0.311 0,0,0 0.673,0.311 A0.164,0.311 0,0,0 0.802,0.614 V0.699 H0.783 C0.764,0.699,0.749,0.728,0.749,0.764 C0.749,0.801,0.764,0.829,0.783,0.829 H0.802 V0.933 C0.802,0.97,0.817,1,0.836,1 C0.855,1,0.87,0.97,0.87,0.933 V0.829 H0.889 C0.908,0.829,0.923,0.801,0.923,0.764 C0.923,0.728,0.908,0.699,0.889,0.699 H0.87 V0.614 A0.164,0.311 0,0,0 1,0.311 A0.164,0.311 0,0,0 0.836,0 Z"
-                />
-              </clipPath>
-            </defs>
-          </svg>
         </div>
       </section>
 
@@ -204,5 +222,15 @@
 
     <!-- <footer> --->
     <include src="./src_P2/includes/footer.html"></include>
+
+    <svg width="0" height="0">
+      <defs>
+        <clipPath id="clip-gastronomia" clipPathUnits="objectBoundingBox">
+          <path
+            d="M0.556,0 C0.546,0,0.539,0.014,0.539,0.032 V0.333 C0.539,0.351,0.546,0.365,0.556,0.365 H0.557 V0.412 A0.155,0.294 0,0,0 0.416,0.705 A0.155,0.294 0,0,0 0.571,1 A0.155,0.294 0,0,0 0.726,0.705 A0.155,0.294 0,0,0 0.585,0.412 V0.365 H0.587 C0.596,0.365,0.603,0.351,0.603,0.333 V0.032 C0.603,0.014,0.596,0,0.587,0 Z M0.238,0 A0.109,0.208 0,0,0 0.136,0.137 A0.109,0.208 0,0,0 0.11,0.131 A0.109,0.208 0,0,0 0,0.339 A0.109,0.208 0,0,0 0.098,0.545 V1 H0.238 V1 H0.378 V0.545 A0.109,0.208 0,0,0 0.476,0.339 A0.109,0.208 0,0,0 0.366,0.131 A0.109,0.208 0,0,0 0.341,0.137 A0.109,0.208 0,0,0 0.238,0 Z M0.836,0 A0.164,0.311 0,0,0 0.673,0.311 A0.164,0.311 0,0,0 0.802,0.614 V0.699 H0.783 C0.764,0.699,0.749,0.728,0.749,0.764 C0.749,0.801,0.764,0.829,0.783,0.829 H0.802 V0.933 C0.802,0.97,0.817,1,0.836,1 C0.855,1,0.87,0.97,0.87,0.933 V0.829 H0.889 C0.908,0.829,0.923,0.801,0.923,0.764 C0.923,0.728,0.908,0.699,0.889,0.699 H0.87 V0.614 A0.164,0.311 0,0,0 1,0.311 A0.164,0.311 0,0,0 0.836,0 Z"
+          />
+        </clipPath>
+      </defs>
+    </svg>
   </body>
 </html>

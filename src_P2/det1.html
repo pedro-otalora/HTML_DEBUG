@@ -9,6 +9,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Montse Guillén - {{ titulo_web }}</title>
 
+    <!-- preload de la imagen principal -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      media="(min-width: 768px)"
+      imagesrcset="./img/montse_guillen_panoramica.jpg?as=webp&width=1120 1120w, ./img/montse_guillen_panoramica.jpg?as=webp&width=2240 2240w"
+      imagesizes="(min-width: 1200px) 1120px, 90vw"
+      fetchpriority="high"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      media="(max-width: 767px)"
+      imagesrcset="./img/montse_guillen_cuadrada.jpg?as=webp&width=600 600w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+
     <!-- precarga de la fuente Playfair Display -->
     <link
       rel="preload"
@@ -329,24 +350,27 @@
           <div class="video">
             <figure class="video-figure">
               <div class="video-wrapper">
-                <iframe
-                  src="https://www.youtube.com/embed/FzXJkKQkNX4?si=zCpwifUWt-_UTism"
-                  title="Angel Casas Show || Montse Guillen"
-                  loading="lazy"
-                  width="560"
-                  height="315"
-                  allow="
-                    accelerometer;
-                    autoplay;
-                    clipboard-write;
-                    encrypted-media;
-                    gyroscope;
-                    picture-in-picture;
-                  "
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
+                <!-- se reemplaza el iframe por una fachada para evitar recursos de terceros -->
+
+                <div
+                  class="youtube-fachada"
+                  id="videoFacade"
+                  data-video-id="FzXJkKQkNX4"
                 >
-                </iframe>
+                  <!-- miniatura oficial del vídeo de YouTube -->
+                  <img
+                    src="https://i.ytimg.com/vi/FzXJkKQkNX4/hqdefault.jpg"
+                    alt="Portada de la entrevista a Montse Guillen"
+                    loading="lazy"
+                    width="560"
+                    height="315"
+                  />
+                  <!-- botón de reproducción falso -->
+                  <button
+                    class="play-button"
+                    aria-label="Reproducir vídeo"
+                  ></button>
+                </div>
               </div>
               <figcaption lang="ca">
                 Entrevista Montse Guillen a TV3 ,

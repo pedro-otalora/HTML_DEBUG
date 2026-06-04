@@ -6,6 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>María Gómez - {{ titulo_web }}</title>
 
+    <!-- preload de la imagen principal -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      media="(min-width: 768px)"
+      imagesrcset="./img/maria_gomez_magoga_panoramica.jpg?as=webp&width=1120 1120w, ./img/maria_gomez_magoga_panoramica.jpg?as=webp&width=2240 2240w"
+      imagesizes="(min-width: 1200px) 1120px, 90vw"
+      fetchpriority="high"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      media="(max-width: 767px)"
+      imagesrcset="./img/maria_gomez_magoga_cuadrada.jpg?as=webp&width=600 600w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+
     <!-- precarga de la fuente Playfair Display -->
     <link
       rel="preload"
@@ -321,23 +342,23 @@
           <div class="video">
             <figure class="video-figure">
               <div class="video-wrapper">
-                <iframe
-                  src="https://www.youtube.com/embed/B0dpt86j3IE"
-                  title="Entrevista a María Gómez en La 7: Trayectoria y Estrella Michelin"
-                  loading="lazy"
-                  width="560"
-                  height="315"
-                  allow="
-                    accelerometer;
-                    autoplay;
-                    clipboard-write;
-                    encrypted-media;
-                    gyroscope;
-                    picture-in-picture;
-                  "
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                ></iframe>
+                <div
+                  class="youtube-fachada"
+                  id="videoFacade"
+                  data-video-id="B0dpt86j3IE"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/B0dpt86j3IE/maxresdefault.jpg"
+                    alt="Portada de la entrevista a María Gómez"
+                    loading="lazy"
+                    width="560"
+                    height="315"
+                  />
+                  <button
+                    class="play-button"
+                    aria-label="Reproducir vídeo"
+                  ></button>
+                </div>
               </div>
               <figcaption>
                 Entrevista a María Gómez en La 7 | Fuente: YouTube
