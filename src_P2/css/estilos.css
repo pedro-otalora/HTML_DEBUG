@@ -277,7 +277,7 @@ p {
 .logo-svg-header {
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  /* filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)); */
 }
 
 .logo-text {
@@ -320,18 +320,23 @@ p {
 ======================================= */
 .anim-gorro {
   transform-origin: center center;
+  will-change: transform, opacity;
   animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  /* se elimina el latido para optimizar */
   /* latido 3s ease-in-out 2.5s infinite; */
+
+
 }
 
 .anim-simbolo {
   opacity: 0;
+  will-change: opacity;
   animation: fadeIn 0.6s ease-out 0.8s forwards;
 }
 
 .anim-shadow {
-  opacity: 0;
-  animation: fadeInSombra 1s ease-out 1.4s forwards;
+  opacity: 0.6;
+  /* animation: fadeInSombra 1s ease-out 1.4s forwards; */
 }
 
 @keyframes popIn {
