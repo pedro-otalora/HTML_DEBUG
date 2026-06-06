@@ -1,11 +1,11 @@
 {
   "webp": {
-    "quality": 60,
+    "quality": 80,
     "lossless": false,
     "effort": 4
   },
   "jpeg": {
-    "quality": 60,
+    "quality": 80,
     "progressive": true
   }
 }

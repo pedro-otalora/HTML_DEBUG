@@ -6,29 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ titulo_web }}</title>
 
-    <!-- precarga de la fuente Playfair Display -->
-    <link
-      rel="preload"
-      href="./fonts/playfair-display-v40-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="./fonts/playfair-display-v40-latin-italic.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="./fonts/playfair-display-v40-latin-700.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-
     <!-- icono de página -->
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
     <!-- sharp parece no funcionar con la etiqueta link, así que se hace una versión png -->
@@ -37,8 +14,11 @@
     <!-- hoja de estilos -->
     <link rel="stylesheet" href="./css/estilos.css" />
 
-    <!-- carga el javascript en diferido -->
-    <script src="./js/script.js" defer></script>
+    <!-- tipografía -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
+    />
   </head>
 
   <body>
@@ -47,27 +27,6 @@
 
     <main>
       <section class="hero-index">
-        <picture class="hero-bg-container">
-          <source
-            type="image/webp"
-            media="(min-width: 1024px)"
-            srcset="./img/valentin-7uGtxeLLa0g-unsplash.jpg?as=webp&width=1600"
-          />
-          <source
-            type="image/webp"
-            media="(min-width: 768px)"
-            srcset="./img/valentin-7uGtxeLLa0g-unsplash.jpg?as=webp&width=1000"
-          />
-          <img
-            src="./img/valentin-7uGtxeLLa0g-unsplash.jpg?as=webp&width=600"
-            alt="Fondo decorativo de gastronomía"
-            class="hero-bg-img"
-            fetchpriority="high"
-            width="600"
-            height="400"
-          />
-        </picture>
-
         <div class="hero-index-text">
           <h1>Mujeres que definen nuestra gastronomía</h1>
           <p>
@@ -76,39 +35,83 @@
           </p>
         </div>
 
+        <!-- <div class="hero-index-logo-animado">
+          <svg
+            class="logo-svg-portada"
+            version="1.1"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Logo Gastronomía en femenino</title>
+            <circle id="logo-bg" cx="256" cy="256" r="256" fill="#963b11" />
+            <path
+              class="anim-shadow"
+              d="m399.71 141.71-0.0332 0.03906a74.302 74.302 0 0 1 17.867 48.254 74.302 74.302 0 0 1-66.207 73.723v162.61h-190.66l84.402 84.887a256 256 0 0 0 10.93 0.78125 256 256 0 0 0 256-256 256 256 0 0 0-0.06445-2.6602l-112.23-111.63z"
+              fill="#83360b"
+            />
+            <g class="anim-gorro">
+              <path
+                transform="scale(-1,1)"
+                d="m-256 69.006v357.33h-95.332v-162.61a74.302 74.302 0 0 1-66.207-73.723 74.302 74.302 0 0 1 74.303-74.303 74.302 74.302 0 0 1 17.406 2.2422 74.302 74.302 0 0 1 69.83-48.934z"
+                fill="#f2f6fc"
+              />
+              <path
+                d="m256 69.006a74.302 74.302 0 0 0-69.6 48.826 74.302 74.302 0 0 0-17.637-2.1348 74.302 74.302 0 0 0-74.303 74.303 74.302 74.302 0 0 0 66.207 73.723v162.61h95.332v-357.33z"
+                fill="#fff"
+              />
+              <rect
+                x="256"
+                y="361.97"
+                width="95.332"
+                height="64.364"
+                fill="#cdd2e1"
+              />
+              <rect
+                x="160.67"
+                y="361.97"
+                width="95.332"
+                height="64.364"
+                fill="#e9edf5"
+              />
+              <path
+                class="anim-simbolo"
+                d="m256 132.76a61.377 61.377 0 0 0-61.377 61.377 61.377 61.377 0 0 0 48.506 59.852v16.805h-6.9512c-7.202 0-13 5.7864-13 12.975 0 7.1882 5.798 12.975 13 12.975h6.9512v20.545c0 7.2041 5.7409 13.004 12.871 13.004s12.871-5.7998 12.871-13.004v-20.545h6.9512c7.202 0 13-5.7864 13-12.975 0-7.1882-5.798-12.975-13-12.975h-6.9512v-16.805a61.377 61.377 0 0 0 48.506-59.852 61.377 61.377 0 0 0-61.377-61.377zm0 19.402a41.975 41.975 0 0 1 41.975 41.975 41.975 41.975 0 0 1-41.975 41.975 41.975 41.975 0 0 1-41.975-41.975 41.975 41.975 0 0 1 41.975-41.975z"
+                fill="#efa06d"
+              />
+            </g>
+          </svg>
+        </div> -->
+
         <div class="hero-index-image">
-          <div class="hero-clip-container">
-            <picture>
-              <source
-                type="image/webp"
-                srcset="
-                  ./img/howtogym-S9NchuPb79I-unsplash.jpg?as=webp&width=400   400w,
-                  ./img/howtogym-S9NchuPb79I-unsplash.jpg?as=webp&width=600   600w,
-                  ./img/howtogym-S9NchuPb79I-unsplash.jpg?as=webp&width=800   800w,
-                  ./img/howtogym-S9NchuPb79I-unsplash.jpg?as=webp&width=1200 1200w,
-                  ./img/howtogym-S9NchuPb79I-unsplash.jpg?as=webp&width=1600 1600w,
-                  ./img/howtogym-S9NchuPb79I-unsplash.jpg?as=webp&width=2400 2400w
-                "
-                sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 600px"
-              />
-              <img
-                src="./img/howtogym-S9NchuPb79I-unsplash.jpg?width=800"
-                srcset="
-                  ./img/howtogym-S9NchuPb79I-unsplash.jpg?width=400   400w,
-                  ./img/howtogym-S9NchuPb79I-unsplash.jpg?width=600   600w,
-                  ./img/howtogym-S9NchuPb79I-unsplash.jpg?width=800   800w,
-                  ./img/howtogym-S9NchuPb79I-unsplash.jpg?width=1200 1200w
-                "
-                sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 600px"
-                alt="Lupa negra sobre mesa de mármol blanco. HowToGym - Unspash"
-                class="hero-index-image-clip"
-                loading="lazy"
-                fetchpriority="low"
-                width="800"
-                height="450"
-              />
-            </picture>
-          </div>
+          <!-- Foto de <a href="https://unsplash.com/es/@enginakyurt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">engin akyurt</a> en <a href="https://unsplash.com/es/fotos/chiles-rojos-verdes-y-amarillos-y-chiles-verdes-Y5n8mCpvlZU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+          <img
+            src="./img/howtogym-S9NchuPb79I-unsplash.jpg?as=webp&width=800"
+            alt="Foto de engin akyurt (Unspash)"
+            class="hero-index-image-clip"
+          />
+
+          <!-- forma para el clip-path cubiertos -->
+          <svg width="0" height="0">
+            <defs>
+              <clipPath id="clip-cubiertos" clipPathUnits="objectBoundingBox">
+                <path
+                  transform="rotate(180 0.5 0.5)"
+                  d="M0.536,0.07 C0.524,0.07,0.519,0.07,0.513,0.072 C0.495,0.078,0.476,0.091,0.459,0.11 C0.428,0.144,0.398,0.154,0.344,0.149 C0.334,0.148,0.312,0.147,0.295,0.146 C0.278,0.145,0.239,0.141,0.207,0.137 C0.176,0.134,0.135,0.129,0.116,0.127 C0.097,0.125,0.059,0.121,0.031,0.117 C0.019,0.115,0.012,0.114,0.001,0.113 V0.24 C0.016,0.239,0.04,0.237,0.055,0.235 C0.071,0.234,0.093,0.232,0.104,0.231 C0.115,0.23,0.138,0.228,0.156,0.226 C0.231,0.22,0.297,0.214,0.348,0.211 C0.374,0.209,0.401,0.214,0.421,0.224 C0.43,0.228,0.434,0.231,0.447,0.244 C0.456,0.252,0.467,0.262,0.472,0.266 C0.484,0.274,0.505,0.285,0.519,0.289 C0.539,0.295,0.544,0.295,0.574,0.295 C0.597,0.296,0.606,0.295,0.628,0.292 C0.642,0.291,0.678,0.287,0.708,0.284 C0.859,0.27,0.855,0.27,0.867,0.266 C0.873,0.264,0.879,0.262,0.879,0.262 L0.878,0.25 C0.565,0.248,0.565,0.248,0.565,0.24 C0.565,0.236,0.565,0.232,0.566,0.232 C0.566,0.232,0.575,0.231,0.585,0.23 C0.606,0.228,0.653,0.227,0.732,0.225 C0.792,0.224,0.826,0.223,0.856,0.219 C0.88,0.216,0.879,0.216,0.879,0.209 C0.879,0.206,0.879,0.201,0.878,0.199 L0.566,0.197 V0.186 L0.88,0.188 L0.881,0.183 C0.881,0.18,0.881,0.175,0.881,0.172 L0.88,0.166 L0.859,0.165 C0.848,0.164,0.812,0.162,0.778,0.16 C0.745,0.158,0.694,0.155,0.665,0.154 C0.635,0.152,0.602,0.15,0.591,0.149 C0.58,0.149,0.57,0.148,0.568,0.148 C0.566,0.148,0.565,0.147,0.565,0.143 C0.565,0.141,0.566,0.137,0.566,0.134 L0.567,0.13 L0.88,0.131 L0.88,0.122 L0.88,0.112 L0.872,0.111 C0.864,0.11,0.822,0.106,0.74,0.099 C0.659,0.092,0.562,0.086,0.536,0.086 Z M0.672,0.362 C0.61,0.361,0.548,0.38,0.501,0.417 C0.495,0.422,0.485,0.431,0.479,0.438 C0.435,0.484,0.409,0.494,0.347,0.488 C0.335,0.487,0.309,0.484,0.288,0.482 C0.25,0.478,0.241,0.477,0.169,0.47 C0.102,0.463,0.066,0.459,0.003,0.452 V0.578 C0.108,0.568,0.219,0.558,0.322,0.548 C0.351,0.545,0.363,0.544,0.374,0.545 C0.401,0.547,0.422,0.553,0.442,0.565 C0.455,0.573,0.461,0.579,0.48,0.598 C0.498,0.615,0.508,0.624,0.524,0.634 C0.553,0.652,0.592,0.666,0.629,0.672 C0.65,0.675,0.692,0.675,0.712,0.672 C0.773,0.664,0.824,0.64,0.863,0.603 C0.888,0.58,0.901,0.557,0.905,0.531 C0.91,0.495,0.889,0.454,0.846,0.421 C0.797,0.383,0.735,0.363,0.672,0.362 Z M0.497,0.737 C0.442,0.736,0.322,0.738,0.318,0.74 C0.313,0.741,0.297,0.758,0.284,0.775 C0.278,0.782,0.272,0.789,0.27,0.791 C0.268,0.792,0.259,0.793,0.244,0.795 C0.188,0.801,0.15,0.802,0.108,0.799 C0.085,0.797,0.038,0.792,0.002,0.789 V0.914 C0.021,0.912,0.037,0.911,0.05,0.91 C0.069,0.909,0.089,0.908,0.095,0.907 C0.142,0.904,0.228,0.905,0.277,0.91 C0.325,0.915,0.354,0.916,0.414,0.915 C0.445,0.915,0.562,0.915,0.674,0.915 C0.804,0.915,0.878,0.915,0.88,0.914 C0.882,0.913,0.89,0.91,0.898,0.907 C0.91,0.903,0.912,0.902,0.911,0.9 C0.91,0.899,0.909,0.893,0.907,0.887 C0.901,0.865,0.9,0.864,0.869,0.843 C0.823,0.812,0.806,0.801,0.782,0.789 C0.712,0.755,0.619,0.738,0.497,0.737 Z"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <!-- forma para el clip-path gorroy sarten -->
+          <svg width="0" height="0">
+            <defs>
+              <clipPath id="clip-gastronomia" clipPathUnits="objectBoundingBox">
+                <path
+                  d="M0.556,0 C0.546,0,0.539,0.014,0.539,0.032 V0.333 C0.539,0.351,0.546,0.365,0.556,0.365 H0.557 V0.412 A0.155,0.294 0,0,0 0.416,0.705 A0.155,0.294 0,0,0 0.571,1 A0.155,0.294 0,0,0 0.726,0.705 A0.155,0.294 0,0,0 0.585,0.412 V0.365 H0.587 C0.596,0.365,0.603,0.351,0.603,0.333 V0.032 C0.603,0.014,0.596,0,0.587,0 Z M0.238,0 A0.109,0.208 0,0,0 0.136,0.137 A0.109,0.208 0,0,0 0.11,0.131 A0.109,0.208 0,0,0 0,0.339 A0.109,0.208 0,0,0 0.098,0.545 V1 H0.238 V1 H0.378 V0.545 A0.109,0.208 0,0,0 0.476,0.339 A0.109,0.208 0,0,0 0.366,0.131 A0.109,0.208 0,0,0 0.341,0.137 A0.109,0.208 0,0,0 0.238,0 Z M0.836,0 A0.164,0.311 0,0,0 0.673,0.311 A0.164,0.311 0,0,0 0.802,0.614 V0.699 H0.783 C0.764,0.699,0.749,0.728,0.749,0.764 C0.749,0.801,0.764,0.829,0.783,0.829 H0.802 V0.933 C0.802,0.97,0.817,1,0.836,1 C0.855,1,0.87,0.97,0.87,0.933 V0.829 H0.889 C0.908,0.829,0.923,0.801,0.923,0.764 C0.923,0.728,0.908,0.699,0.889,0.699 H0.87 V0.614 A0.164,0.311 0,0,0 1,0.311 A0.164,0.311 0,0,0 0.836,0 Z"
+                />
+              </clipPath>
+            </defs>
+          </svg>
         </div>
       </section>
 
@@ -128,11 +131,11 @@
                               "src": "montse_guillen.jpg",
                               "alt": "Montse Guillen, cuinera i artista",
                               "lang": "ca",
-                              "sizes": "(max-width: 767px) 100vw, (max-width: 1200px) 45vw, 540px",
+                              "sizes": "(max-width: 767px) 90vw, (max-width: 1200px) 45vw, 540px",
                               "class": "card-image",
                               "loading": "lazy",
-                              "width": "540",
-                              "height": "304"
+                              "width": "600",
+                              "height": "338"
                             }'
                   >
                   </include>
@@ -164,11 +167,10 @@
                               "src": "maria_gomez_magoga.jpg",
                               "alt": "María Gómez en los fogones de Magoga",
                               "lang": "",
-                              "sizes": "(max-width: 767px) 100vw, (max-width: 1200px) 45vw, 540px",
+                              "sizes": "(max-width: 767px) 90vw, (max-width: 1200px) 45vw, 540px",
                               "class": "card-image",
-                              "loading": "lazy",
-                              "width": "540",
-                              "height": "304"
+                              "width": "600",
+                              "height": "338"
                             }'
                   >
                   </include>
@@ -195,14 +197,6 @@
     <!-- <footer> --->
     <include src="./src_P2/includes/footer.html"></include>
 
-    <svg width="0" height="0">
-      <defs>
-        <clipPath id="clip-gastronomia" clipPathUnits="objectBoundingBox">
-          <path
-            d="M0.556,0 C0.546,0,0.539,0.014,0.539,0.032 V0.333 C0.539,0.351,0.546,0.365,0.556,0.365 H0.557 V0.412 A0.155,0.294 0,0,0 0.416,0.705 A0.155,0.294 0,0,0 0.571,1 A0.155,0.294 0,0,0 0.726,0.705 A0.155,0.294 0,0,0 0.585,0.412 V0.365 H0.587 C0.596,0.365,0.603,0.351,0.603,0.333 V0.032 C0.603,0.014,0.596,0,0.587,0 Z M0.238,0 A0.109,0.208 0,0,0 0.136,0.137 A0.109,0.208 0,0,0 0.11,0.131 A0.109,0.208 0,0,0 0,0.339 A0.109,0.208 0,0,0 0.098,0.545 V1 H0.238 V1 H0.378 V0.545 A0.109,0.208 0,0,0 0.476,0.339 A0.109,0.208 0,0,0 0.366,0.131 A0.109,0.208 0,0,0 0.341,0.137 A0.109,0.208 0,0,0 0.238,0 Z M0.836,0 A0.164,0.311 0,0,0 0.673,0.311 A0.164,0.311 0,0,0 0.802,0.614 V0.699 H0.783 C0.764,0.699,0.749,0.728,0.749,0.764 C0.749,0.801,0.764,0.829,0.783,0.829 H0.802 V0.933 C0.802,0.97,0.817,1,0.836,1 C0.855,1,0.87,0.97,0.87,0.933 V0.829 H0.889 C0.908,0.829,0.923,0.801,0.923,0.764 C0.923,0.728,0.908,0.699,0.889,0.699 H0.87 V0.614 A0.164,0.311 0,0,0 1,0.311 A0.164,0.311 0,0,0 0.836,0 Z"
-          />
-        </clipPath>
-      </defs>
-    </svg>
+    <script src="./js/script.js"></script>
   </body>
 </html>

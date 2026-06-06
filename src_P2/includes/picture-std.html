@@ -1,23 +1,13 @@
 <picture>
   <source
     type="image/webp"
-    media="(max-width: 767px)"
     srcset="
-      ./img/{{src}}?as=webp&width=400 400w,
-      ./img/{{src}}?as=webp&width=600 600w
-    "
-    sizes="100vw"
-  />
-
-  <source
-    type="image/webp"
-    media="(min-width: 768px)"
-    srcset="
+      ./img/{{src}}?as=webp&width=400   400w,
       ./img/{{src}}?as=webp&width=800   800w,
       ./img/{{src}}?as=webp&width=1200 1200w,
       ./img/{{src}}?as=webp&width=1600 1600w
     "
-    sizes="540px"
+    sizes="{{sizes}}"
   />
 
   <img
@@ -25,7 +15,7 @@
     alt="{{alt}}"
     lang="{{lang}}"
     class="{{class}}"
-    loading="{{typeof loading !== 'undefined' ? loading : 'lazy'}}"
+    loading="lazy"
     width="{{width}}"
     height="{{height}}"
   />

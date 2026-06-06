@@ -9,60 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Montse Guillén - {{ titulo_web }}</title>
 
-    <!-- preload de la imagen principal -->
-    <link
-      rel="preload"
-      as="image"
-      type="image/webp"
-      media="(min-width: 768px)"
-      imagesrcset="./img/montse_guillen_panoramica.jpg?as=webp&width=1120 1120w, ./img/montse_guillen_panoramica.jpg?as=webp&width=2240 2240w"
-      imagesizes="(min-width: 1200px) 1120px, 90vw"
-      fetchpriority="high"
-    />
-
-    <link
-      rel="preload"
-      as="image"
-      type="image/webp"
-      media="(max-width: 767px)"
-      imagesrcset="./img/montse_guillen_cuadrada.jpg?as=webp&width=600 600w"
-      imagesizes="100vw"
-      fetchpriority="high"
-    />
-
-    <!-- precarga de la fuente Playfair Display -->
-    <link
-      rel="preload"
-      href="./fonts/playfair-display-v40-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="./fonts/playfair-display-v40-latin-italic.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="./fonts/playfair-display-v40-latin-700.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-
     <!-- icono de página -->
-    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
     <!-- sharp parece no funcionar con la etiqueta link, así que se hace una versión png -->
-    <link rel="icon" href="./img/favicon.png" type="image/png" />
+    <link rel="icon" href="./img/favicon.png" type="image/png">
 
     <!-- hoja de estilos -->
     <link rel="stylesheet" href="./css/estilos.css" />
 
-    <!-- carga el javascript en diferido -->
-    <script src="./js/script.js" defer></script>
+    <!-- tipografía -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
+    />
   </head>
   <body>
     <!-- cabecera de página -->
@@ -191,7 +150,6 @@
                           "lang": "",
                           "sizes": "(max-width: 767px) 90vw, 800px",
                           "class": "receta-imagen",
-                          "loading": "lazy",
                           "width": "800",
                           "height": "400"
                         }'
@@ -277,7 +235,6 @@
                               "lang": "",
                               "sizes": "(max-width: 767px) 45vw, 30vw",
                               "class": "galeria-img",
-                              "loading": "lazy",
                               "width": "400",
                               "height": "300"
                             }'
@@ -301,7 +258,6 @@
                               "lang": "",
                               "sizes": "(max-width: 767px) 45vw, 30vw",
                               "class": "galeria-img",
-                              "loading": "lazy",
                               "width": "400",
                               "height": "300"
                             }'
@@ -323,7 +279,6 @@
                               "lang": "",
                               "sizes": "(max-width: 767px) 45vw, 30vw",
                               "class": "galeria-img",
-                              "loading": "lazy",
                               "width": "400",
                               "height": "300"
                             }'
@@ -350,27 +305,24 @@
           <div class="video">
             <figure class="video-figure">
               <div class="video-wrapper">
-                <!-- se reemplaza el iframe por una fachada para evitar recursos de terceros -->
-
-                <div
-                  class="youtube-fachada"
-                  id="videoFacade"
-                  data-video-id="FzXJkKQkNX4"
+                <iframe
+                  src="https://www.youtube.com/embed/FzXJkKQkNX4?si=zCpwifUWt-_UTism"
+                  title="Angel Casas Show || Montse Guillen"
+                  loading="lazy"
+                  width="560"
+                  height="315"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                  "
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
                 >
-                  <!-- miniatura oficial del vídeo de YouTube -->
-                  <img
-                    src="https://i.ytimg.com/vi/FzXJkKQkNX4/hqdefault.jpg"
-                    alt="Portada de la entrevista a Montse Guillen"
-                    loading="lazy"
-                    width="560"
-                    height="315"
-                  />
-                  <!-- botón de reproducción falso -->
-                  <button
-                    class="play-button"
-                    aria-label="Reproducir vídeo"
-                  ></button>
-                </div>
+                </iframe>
               </div>
               <figcaption lang="ca">
                 Entrevista Montse Guillen a TV3 ,
@@ -543,5 +495,7 @@
 
     <!-- <footer> --->
     <include src="./src_P2/includes/footer.html"></include>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
