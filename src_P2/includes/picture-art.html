@@ -10,20 +10,27 @@
   />
 
   <source
+    media="(max-width: 767px)"
     type="image/webp"
     srcset="
       ./img/{{srcMobile}}?as=webp&width=600   600w,
-      ./img/{{srcMobile}}?as=webp&width=1200 1200w
+      ./img/{{srcMobile}}?as=webp&width=1200 1200w,
+      ./img/{{srcMobile}}?as=webp&width=1800 1800w
     "
     sizes="100vw"
   />
 
   <img
     src="./img/{{srcDesktop}}?width=1120"
+    srcset="
+      ./img/{{srcMobile}}?width=600 600w, 
+      ./img/{{srcDesktop}}?width=1120 1120w
+    "
+    sizes="(max-width: 767px) 100vw, (min-width: 1200px) 1120px, 90vw"
     alt="{{alt}}"
     lang="{{lang}}"
     class="{{class}}"
-  
+    loading="eager"
     width="1120"
     height="400"
   />
