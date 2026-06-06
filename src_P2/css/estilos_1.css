@@ -73,10 +73,8 @@ p {
    HERO GENERAL
 ======================================= */
 .hero-general {
-  background: linear-gradient(
-    #faf9f6,
-    #ffffff
-  );
+  /* Se elimina el linear-gradient conflictivo por un color plano */
+  background-color: #faf9f6;
   min-height: 10vh;
   display: block;
   text-align: center;
@@ -128,7 +126,7 @@ p {
 .breadcrumb-nav a {
   color: #8b4513;
   text-decoration: none;
-  transition: color 0.2s;
+  /* Se elimina la transición de color */
 }
 
 .breadcrumb-nav a:hover {
@@ -150,7 +148,7 @@ p {
   margin-top: 3rem;
   margin-bottom: 3rem;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Se elimina box-shadow */
 }
 
 .fuentes h1 {
@@ -172,7 +170,7 @@ p {
   color: #b85c1a;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: border-bottom 0.2s;
+  /* Se elimina la transición del borde */
 }
 
 .fuentes a:hover,
