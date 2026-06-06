@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Fuentes - Gastronomía en femenino" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fuentes - {{ titulo_web }}</title>
+
+    <!-- precarga de la fuente Playfair Display -->
+    <link
+      rel="preload"
+      href="./fonts/playfair-display-v40-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./fonts/playfair-display-v40-latin-italic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./fonts/playfair-display-v40-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <!-- icono de página -->
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
+    <!-- sharp parece no funcionar con la etiqueta link, así que se hace una versión png -->
+    <link rel="icon" href="./img/favicon.png" type="image/png" />
+
+    <!-- hoja de estilos -->
+    <link rel="stylesheet" href="./css/estilos.css" />
+
+    <!-- carga el javascript en diferido -->
+    <script src="./js/script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- cabecera de página -->
+    <include src="./src_P2/includes/header.html"></include>
+
+    <main>
+      <!-- miga de pan -->
+      <nav class="breadcrumb-nav" aria-label="Miga de pan">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li aria-current="page">Fuentes</li>
+        </ol>
+      </nav>
+
+      <!-- fuentes -->
+      <!-- <section class="fuentes container"> -->
+      <section class="hero-general">
+        <h1>Fuentes y referencias</h1>
+        <!-- <p class="fuentes-intro"> -->
+        <p>
+          En esta página se recogen las fuentes consultadas y los créditos de
+          autoría de textos, recetas e imágenes utilizados en el proyecto
+          <em>Gastronomía en femenino</em>.
+        </p>
+      </section>
+
+      <div>
+        <!-- montse guillen -->
+        <article class="fuentes container">
+          <h2>Montse Guillén</h2>
+
+          <!-- enlaces páginas web -->
+          <h3>Texto y receta</h3>
+          <ul>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">Wikipedia (ca):</span>
+              <a
+                href="https://ca.wikipedia.org/wiki/Montse_Guill%C3%A9n_Pijoan"
+                target="_blank"
+                rel="noopener"
+                >Montse Guillén Pijoan</a
+              >
+            </li>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">betevé:</span>
+              <a
+                href="https://beteve.cat/cultura/mor-montse-guillen-cuinera-artista/"
+                target="_blank"
+                rel="noopener"
+                lang="ca"
+                >Mor Montse Guillén, la cuinera que va portar el pa amb tomàquet
+                i el porró a Nova York</a
+              >
+            </li>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">betevé:</span>
+              <a
+                href="https://beteve.cat/basics/arxiu-barcelona-montse-guillen-cuinera-iconic-bar-tapes-internacional-nova-york/"
+                target="_blank"
+                rel="noopener"
+                lang="ca"
+                >Arxiu Barcelona: Montse Guillén, la cuinera que va fer tastar
+                la botifarra amb mongetes a Warhol
+              </a>
+            </li>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">La Vanguardia:</span>
+              <a
+                href="https://www.lavanguardia.com/comer/20250420/10599568/cocinera-montse-guillen-muere-79-anos.html"
+                target="_blank"
+                rel="noopener"
+                >Muere Montse Guillén, la cocinera que introdujo el
+                <span lang="ca">'pa amb tomàquet'</span> en Nueva York, a los 79
+                años</a
+              >
+              <span class="fuentes-fecha"
+                >(<time datetime="2025-04-20">20/04/2025</time>)</span
+              >
+            </li>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold" lang="ca">Mengem (ARA):</span>
+              <a
+                href="https://mengem.ara.cat/mengem/menjarem-insectes-n-segura_128_5024409.html"
+                target="_blank"
+                rel="noopener"
+                >Entrevista Montse Guillén:
+                <span lang="ca">"Menjarem insectes, n’estic segura”</span></a
+              >
+            </li>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">Wikipedia (ca):</span>
+              <a
+                href="https://ca.wikipedia.org/wiki/Pa_amb_tom%C3%A0quet"
+                target="_blank"
+                rel="noopener"
+                lang="ca"
+                >Pa amb tomàquet</a
+              >
+            </li>
+            <!-- enlace video -->
+            <li>
+              <span class="fuentes-bold">TV3:</span>
+              <a
+                href="https://www.youtube.com/embed/FzXJkKQkNX4?si=zCpwifUWt-_UTism"
+                target="_blank"
+                rel="noopener"
+                >Entrevista Montse Guillen a <span lang="ca">TV3</span>, 1985
+                (<span lang="ca">en català</span>)</a
+              >
+            </li>
+          </ul>
+
+          <!-- créditos imágenes-->
+          <h3>Imágenes</h3>
+          <ul>
+            <!-- créditos -->
+            <li>
+              <span class="fuentes-bold">Portada: </span
+              ><span lang="ca"
+                >Montse Guillén, cuinera i artista | Pere Virgili |
+              </span>
+              <a
+                href="https://mengem.ara.cat/mengem/menjarem-insectes-n-segura_128_5024409.html"
+                target="_blank"
+                rel="noopener"
+                lang="ca"
+                >Mengem! (ARA)</a
+              >
+            </li>
+            <!-- créditos -->
+            <li>
+              <span class="fuentes-bold">Receta: </span
+              ><span lang="ca">Pa amb tomàquet</span> | Mutari |
+              <a
+                href="https://commons.wikimedia.org/w/index.php?curid=2920292"
+                target="_blank"
+                rel="noopener"
+                >Wikimedia (Dominio público)</a
+              >
+            </li>
+            <!-- créditos -->
+            <li>
+              <span class="fuentes-bold">Galería 1: </span>Montse Guillén con
+              Antoni Miralda (Libertine <time datetime="2017">2017</time>) |
+              <a
+                href="https://www.lavanguardia.com/comer/20250420/10599568/cocinera-montse-guillen-muere-79-anos.html"
+                target="_blank"
+                rel="noopener"
+                >La Vanguardia</a
+              >
+            </li>
+            <!-- créditos -->
+            <li>
+              <span class="fuentes-bold">Galería 2: </span>Montse Guillén |
+              <span lang="ca">Bàsics</span>
+              |
+              <a
+                href="https://beteve.cat/cultura/mor-montse-guillen-cuinera-artista/"
+                target="_blank"
+                rel="noopener"
+                >betevé Cultura</a
+              >
+            </li>
+            <!-- créditos -->
+            <li>
+              <span class="fuentes-bold">Galería 3: </span>MG Restaurant (<time
+                datetime="1980"
+                >1980</time
+              >) |
+              <a
+                href="https://beteve.cat/basics/arxiu-barcelona-montse-guillen-cuinera-iconic-bar-tapes-internacional-nova-york/"
+                target="_blank"
+                rel="noopener"
+                lang="ca"
+                >betevé Bàsics</a
+              >
+            </li>
+          </ul>
+        </article>
+
+        <!-- maría gómez -->
+        <article class="fuentes container">
+          <h2>María Gómez</h2>
+
+          <!-- enlaces páginas web -->
+          <h3>Texto y receta</h3>
+          <ul>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">Restaurante Magoga:</span>
+              <a
+                href="https://restaurantemagoga.com/maria-gomez-el-alma-de-magoga/"
+                target="_blank"
+                rel="noopener"
+                >María Gómez, el alma de Magoga</a
+              >
+            </li>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">La Nucía Gastronómica:</span>
+              <a
+                href="https://lanuciagastronomica.com/magoga/"
+                target="_blank"
+                rel="noopener"
+                >Magoga - Chef María Gómez</a
+              >
+            </li>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold" lang="en">Facefoodmag:</span>
+              <a
+                href="https://facefoodmag.com/magazine/maria-gomez-equilibrio-campo-cartagena-mediterraneo"
+                target="_blank"
+                rel="noopener"
+                >María Gómez. El equilibrio entre el campo de Cartagena y el mar
+                Mediterráneo</a
+              >
+            </li>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">65YMAS.COM:</span>
+              <a
+                href="https://www.65ymas.com/sabores-mi-tierra/gastronomia-region-murcia/mujeres-ocupan-lugar-destacado-en-gastronomia-murciana_37597_102.html#:~:text=Mar%C3%ADa%20G%C3%B3mez%2C%20de%20Magoga%2C%20Cartagena"
+                target="_blank"
+                rel="noopener"
+                >María Gómez, de Magoga, Cartagena</a
+              >
+            </li>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">elPeriódico:</span>
+              <a
+                href="https://www.elperiodico.com/es/gastronomia/20231221/menu-ano-nuevo-recetas-pescado-originales-117863185"
+                target="_blank"
+                rel="noopener"
+                >Marinero y muy original: prepara un menú con estrella
+                <span lang="fr"><i>Michelin</i></span> para Año Nuevo</a
+              >
+              <span class="fuentes-fecha"
+                >(<time datetime="2023-12-21">21/12/2023</time>)</span
+              >
+            </li>
+            <!-- enlace video -->
+            <li>
+              <span class="fuentes-bold">La 7 (TV Autonómica de Murcia):</span>
+              <a
+                href="https://www.youtube.com/watch?v=B0dpt86j3IE"
+                target="_blank"
+                rel="noopener"
+                >Entrevista a María Gómez: El alma de Magoga y su reconocimiento
+                <span lang="fr"><i>Michelin</i></span></a
+              >
+            </li>
+          </ul>
+
+          <!-- créditos imágenes-->
+          <h3>Imágenes</h3>
+          <ul>
+            <!-- créditos -->
+            <li>
+              <span class="fuentes-bold">Portada:</span> María Gómez | Magoga |
+              <a
+                href="https://restaurantemagoga.com/wp-content/uploads/2025/08/Maria-Gomez-Magoga.jpg"
+                target="_blank"
+                rel="noopener"
+                >Restaurante Magoga</a
+              >
+            </li>
+            <!-- créditos -->
+            <li>
+              <span class="fuentes-bold">Receta: </span>Gambas con crema de
+              pimientos amarillos | Mayra Fernández Joglar |
+              <a
+                href="https://www.thermorecetas.com/wp-content/uploads/2015/07/gambas-con-crema-de-pimiento-amarillo-thermorecetas.jpg.webp"
+                target="_blank"
+                rel="noopener"
+                >Thermorecetas</a
+              >
+            </li>
+            <!-- créditos -->
+            <li>
+              <span class="fuentes-bold">Galería 1: </span>María Gómez, de
+              Magoga, Cartagena |
+              <a
+                href="https://www.65ymas.com/uploads/s1/97/62/07/mari-a-go-mez-de-magoga-cartagena_1_621x621.jpeg"
+                target="_blank"
+                rel="noopener"
+                >65YMAS.com</a
+              >
+            </li>
+            <!-- créditos -->
+            <li>
+              <span class="fuentes-bold">Galería 2: </span>Chef María Gómez |
+              Magoga |
+              <a
+                href="https://facefoodmag.com/fotos/blog/chef-maria-gomez-arrozal-calasparra.jpg"
+                target="_blank"
+                rel="noopener"
+                lang="en"
+                >Facefoodmag</a
+              >
+            </li>
+            <!-- créditos -->
+            <li>
+              <span class="fuentes-bold">Galería 3: </span>María Gómez y Adrián
+              de Marcos | Magoga |
+              <a
+                href="https://facefoodmag.com/fotos/files/maria-gomez-adrian-de-marcos.jpg"
+                target="_blank"
+                rel="noopener"
+                >Restaurante Magoga</a
+              >
+            </li>
+          </ul>
+        </article>
+
+        <!-- Otros enlaces -->
+        <article class="fuentes container">
+          <h2>Otras fuentes</h2>
+
+          <!-- enlaces páginas web -->
+          <h3>Información y fotos en las fichas del listado de pioneras</h3>
+          <ul>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">Gastronomistas.com:</span>
+              <a
+                href="https://www.gastronomistas.com/50-grandes-mujeres-de-nuestra-gastronomia/"
+                target="_blank"
+                rel="noopener"
+                >8M: más de 50 grandes mujeres de nuestra gastronomía (y nos
+                dejamos muchas)</a
+              >
+            </li>
+          </ul>
+
+          <!-- enlaces páginas web -->
+          <h3>Logotipo de cabecera</h3>
+          <ul>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">Freepik.com:</span>
+              <a
+                href="https://www.flaticon.es/iconos-gratis/cocinero"
+                target="_blank"
+                rel="noopener"
+                title="cocinero iconos"
+                >Cocinero iconos creados por Freepik - Flaticon</a
+              >
+            </li>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">Freepik.com:</span>
+              <a
+                href="https://www.flaticon.es/iconos-gratis/feminismo"
+                target="_blank"
+                rel="noopener"
+                title="feminismo iconos"
+                >Feminismo iconos creados por Freepik - Flaticon</a
+              >
+            </li>
+          </ul>
+
+          <!-- enlaces páginas web -->
+          <h3>Imágenes de portada</h3>
+          <ul>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">Unsplash.com:</span>
+              <a
+                href="https://unsplash.com/es/fotos/lupa-negra-sobre-mesa-de-marmol-blanco-y-marron-S9NchuPb79I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                target="_blank"
+                rel="noopener"
+                title="lupa negra sobre mesa de marmol blanco"
+                >Lupa negra sobre mesa de mármol blanco y marrón - HowToGym</a
+              >
+            </li>
+            <!-- enlace web -->
+            <li>
+              <span class="fuentes-bold">Unsplash.com:</span>
+              <a
+                href="https://unsplash.com/es/fotos/chefs-trabajando-en-una-cocina-a-traves-de-una-ventana-7uGtxeLLa0g"
+                target="_blank"
+                rel="noopener"
+                title="Chefs trabajando en una cocina a través de una ventana"
+                >Chefs trabajando en una cocina a través de una ventana -
+                Valentin</a
+              >
+            </li>
+          </ul>
+
+          <!-- enlaces páginas web -->
+          <h3>Uso de herramientas IA</h3>
+          <ul>
+            <!-- enlace web -->
+            <li>
+              <p>
+                Para la elaboración de los contenidos biográficos y descriptivos
+                de las secciones de detalle de las chefs, se han utilizado
+                herramientas de IA generativa como apoyo en la síntesis y
+                redacción inicial de la información a partir de las fuentes
+                seleccionadas.
+              </p>
+              <p>
+                Todos los textos generados han sido finalmente revisados,
+                contrastados y editados manualmente para garantizar que el
+                contenido sea acorde a las fuentes utilizadas.
+              </p>
+            </li>
+          </ul>
+        </article>
+      </div>
+      <!-- </section> -->
+    </main>
+
+    <!-- <footer> --->
+    <include src="./src_P2/includes/footer.html"></include>
+  </body>
+</html>
