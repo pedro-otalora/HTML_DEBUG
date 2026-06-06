@@ -1,8 +1,6 @@
 /* se quita la fuente playfair */
-/*  se quitan los estilos del logo y animaciones */
+/* se quitan los estilos del logo y animaciones */
 /* se quitan los estilos del video youtube */
-
-/* se quitan las variables y el bloque root */
 
 /* ========================================
    DEPENDENCIA HOVER
@@ -71,8 +69,6 @@ p {
   font-weight: 400;
 }
 
-
-
 /* ========================================
    HERO GENERAL
 ======================================= */
@@ -83,9 +79,7 @@ p {
   );
   min-height: 10vh;
   display: block;
-  align-items: center;
   text-align: center;
-
   margin: 0 auto;
   padding: 1rem 2.5rem;
 }
@@ -99,20 +93,6 @@ p {
   max-width: 800px;
   margin: 0 auto 1rem;
   font-size: 1.1rem;
-}
-
-/* ========================================
-   SECCIONES
-======================================= */
-.ultimas-entradas,
-.categoria {
-  padding: 1rem 0;
-}
-
-.ultimas-entradas h2,
-.categoria h2 {
-  text-align: center;
-  margin-bottom: 3rem;
 }
 
 /* ========================================
@@ -211,18 +191,6 @@ p {
   font-size: 0.95rem;
 }
 
-.fuente-bloque {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-}
-
-.fuente-bloque h2 {
-  margin-bottom: 1rem;
-}
-
 .fuentes-bold {
   font-weight: 700;
   color: #8b4513;
@@ -251,10 +219,6 @@ footer {
 
 .footer a {
   color: #ffffff;
-}
-
-.footer a:hover {
-  border-bottom-color: currentColor;
 }
 
 /* ========================================
