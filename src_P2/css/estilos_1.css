@@ -2,52 +2,14 @@
 /*  se quitan los estilos del logo y animaciones */
 /* se quitan los estilos del video youtube */
 
+/* se quitan las variables y el bloque root */
+
 /* ========================================
    DEPENDENCIA HOVER
 ======================================= */
 /* se elimina su carga y se añaden los estilos necesarios al final del css */
 /* @import "npm:hover.css"; */
 
-
-
-/* ========================================
-   VARIABLES CSS
-======================================= */
-:root {
-  /* FUENTES */
-  --fuente-titulo: Georgia, serif;
-
-  /* --fuente-cuerpo: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; */
-  /* se sustituye la fuente Inter por su similitud con las fuentes del sistema */
-  --fuente-cuerpo:
-    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
-  --fuente-regular: 400;
-  --fuente-medium: 500;
-  --fuente-bold: 700;
-
-  /* COLORES DE TEXTO */
-  --color-texto: #2d1b14;
-  --color-texto-inverso: #ffffff;
-
-  /* COLORES DECORATIVOS */
-  /* --color-primario: #d2691e; */
-  --color-primario: #b85c1a;
-  --color-primario-oscuro: #8b4513;
-  --color-hover: #d2691e;
-
-  /* COLORES DE FONDO */
-  --color-fondo-body: #faf9f6;
-  --color-fondo-blanco: #ffffff;
-
-  /* OVERLAYS */
-  --overlay-negro: rgba(0, 0, 0, 0.75);
-
-  /* SOMBRAS */
-  --sombra-tenue: 0 4px 20px rgba(0, 0, 0, 0.1);
-  --sombra-fuerte: 0 12px 40px rgba(0, 0, 0, 0.2);
-  --sombra-modal: 0 20px 60px rgba(0, 0, 0, 0.5);
-}
 
 /* ========================================
    BASE
@@ -64,11 +26,11 @@ html {
 }
 
 body {
-  font-family: var(--fuente-cuerpo);
-  font-weight: var(--fuente-regular);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
   line-height: 1.6;
-  color: var(--color-texto);
-  background-color: var(--color-fondo-body);
+  color: #2d1b14;
+  background-color: #faf9f6;
 }
 
 /* ========================================
@@ -86,9 +48,9 @@ body {
 h1,
 h2,
 h3 {
-  font-family: var(--fuente-titulo);
-  font-weight: var(--fuente-bold);
-  color: var(--color-primario-oscuro);
+  font-family: Georgia, serif;
+  font-weight: 700;
+  color: #8b4513;
   line-height: 1.3;
 }
 
@@ -105,8 +67,8 @@ h3 {
 }
 
 p {
-  font-family: var(--fuente-cuerpo);
-  font-weight: var(--fuente-regular);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 
 
@@ -116,8 +78,8 @@ p {
 ======================================= */
 .hero-general {
   background: linear-gradient(
-    var(--color-fondo-body),
-    var(--color-fondo-blanco)
+    #faf9f6,
+    #ffffff
   );
   min-height: 10vh;
   display: block;
@@ -129,7 +91,7 @@ p {
 }
 
 .hero-general h1 {
-  font-family: var(--fuente-titulo);
+  font-family: Georgia, serif;
   margin-bottom: 1rem;
 }
 
@@ -157,7 +119,7 @@ p {
    MIGA DE PAN
 ======================================= */
 .breadcrumb-nav {
-  background-color: var(--color-fondo-body);
+  background-color: #faf9f6;
   padding: 0.7rem 2.5rem;
 }
 
@@ -169,46 +131,46 @@ p {
   margin: 0;
   padding: 0;
   font-size: 0.9rem;
-  font-family: var(--fuente-cuerpo);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .breadcrumb-nav li {
-  color: var(--color-primario-oscuro);
+  color: #8b4513;
 }
 
 .breadcrumb-nav li:not(:last-child)::after {
   content: ">";
   margin-left: 0.5rem;
-  color: var(--color-primario-oscuro);
-  font-weight: var(--fuente-regular);
+  color: #8b4513;
+  font-weight: 400;
 }
 
 .breadcrumb-nav a {
-  color: var(--color-primario-oscuro);
+  color: #8b4513;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .breadcrumb-nav a:hover {
-  color: var(--color-hover);
+  color: #d2691e;
   text-decoration: underline;
 }
 
 .breadcrumb-nav li[aria-current="page"] {
-  font-weight: var(--fuente-medium);
-  color: var(--color-primario);
+  font-weight: 500;
+  color: #b85c1a;
 }
 
 /* ========================================
    FUENTES COMÚN TODAS LAS PÁGINAS
 ======================================= */
 .fuentes {
-  background: var(--color-fondo-body);
+  background: #faf9f6;
   padding: 2rem 2rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
   border-radius: 16px;
-  box-shadow: var(--sombra-tenue);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .fuentes h1 {
@@ -227,7 +189,7 @@ p {
 }
 
 .fuentes a {
-  color: var(--color-primario);
+  color: #b85c1a;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-bottom 0.2s;
@@ -245,16 +207,16 @@ p {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 2.5rem;
-  color: var(--color-texto);
+  color: #2d1b14;
   font-size: 0.95rem;
 }
 
 .fuente-bloque {
-  background: var(--color-fondo-blanco);
+  background: #ffffff;
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2rem;
-  box-shadow: var(--sombra-fuerte);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .fuente-bloque h2 {
@@ -262,16 +224,16 @@ p {
 }
 
 .fuentes-bold {
-  font-weight: var(--fuente-bold);
-  color: var(--color-primario-oscuro);
+  font-weight: 700;
+  color: #8b4513;
   text-transform: uppercase;
   font-size: 0.9em;
   letter-spacing: 0.05em;
 }
 
 .fuentes-fecha {
-  font-weight: var(--fuente-regular);
-  color: var(--color-primario);
+  font-weight: 400;
+  color: #b85c1a;
   font-size: 0.8em;
   letter-spacing: 0.05em;
 }
@@ -280,15 +242,15 @@ p {
    FOOTER
 ======================================= */
 footer {
-  background: var(--color-primario-oscuro);
-  color: var(--color-texto-inverso);
+  background: #8b4513;
+  color: #ffffff;
   text-align: center;
   padding: 3rem 1rem;
   margin-top: 5rem;
 }
 
 .footer a {
-  color: var(--color-texto-inverso);
+  color: #ffffff;
 }
 
 .footer a:hover {
@@ -307,7 +269,6 @@ abbr[title] {
    ACCESIBILIDAD
 ======================================= */
 :focus-visible {
-  outline: 3px solid var(--color-primario);
+  outline: 3px solid #b85c1a;
   outline-offset: 2px;
 }
-
